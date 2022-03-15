@@ -16,6 +16,7 @@ function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/forgotpassword" element={<ForgotPassword/>} />
+        <Route path="/mock" element={<Mockman/>} />
       </Routes>
     </div>
   );
