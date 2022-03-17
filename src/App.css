@@ -44,7 +44,12 @@
   margin-top: 3.5rem;
 }
 
-
+/* navbar */
+.navLogo{
+  max-height: 50px;
+  max-inline-size: none;
+  
+}
 
 /* homepage */
 
@@ -113,6 +118,7 @@
 
 
 /* auth page */
+
 .h-100-vh{
   height: 100vh;
 }

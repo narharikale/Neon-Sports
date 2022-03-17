@@ -18,9 +18,10 @@ export const products = [
     avalabelSize: ['XS', 'S', 'M', 'l', 'XL'],
     isBestseller: true,
     isTrending: false,
-    imageSource: ["assets/Aloe/photo-1.webp", "assets/Aloe/photo-2.webp"],
+    imageSource: ["assets/men/apparels/GRAPHICS CAMO BASKETBALL JERSEY.jpg"],
     quantity: 15,
-    inStock: true
+    inStock: true,
+    isNewArrival : true
   },
   {
     _id: uuid(),
@@ -34,9 +35,10 @@ export const products = [
     avalabelSize: ['5','6','7','8','9','10'],
     isBestseller: true,
     isTrending: true,
-    imageSource: ["assets/Aloe/photo-1.webp", "assets/Aloe/photo-2.webp"],
+    imageSource: ["assets/men/shoes/NMD_R1 PRIMEBLUE SHOES.jpg"],
     quantity: 5,
-    inStock: true
+    inStock: true,
+    isNewArrival : false
   },
   {
     _id: uuid(),
@@ -50,29 +52,31 @@ export const products = [
     avalabelSize: ['XS', 'S', 'M', 'l', 'XL'],
     isBestseller: false,
     isTrending: false,
-    imageSource: ["assets/Aloe/photo-1.webp", "assets/Aloe/photo-2.webp"],
+    imageSource: ["assets/men/apparels/ADIDAS SPRT SHARK WOVEN TRACK JACKET.jpg"],
     quantity: 7,
-    inStock: true
+    inStock: true,
+    isNewArrival : false
   },
   {
     _id: uuid(),
-    name: "ADILETTE BONEGA SLIDES",
+    name: "ADILETTE BONEGA ",
     product:"shoe",
     category:'women',
     originalPrice: 4999,
     discountedPrice:3499,
-    description: "CASUAL ADILETTE SLIDES WITH A CHIC DESIGN.",
+    description: "CASUAL ADILETTE  WITH A CHIC DESIGN.",
     rating: 3.5,
     avalabelSize: ['5','6','7','8','9','10'],
     isBestseller: false,
     isTrending: false,
-    imageSource: ["assets/Aloe/photo-1.webp", "assets/Aloe/photo-2.webp"],
+    imageSource: ["assets/women/shoes/ADILETTE BONEGA.jpg"],
     quantity: 15,
-    inStock: true
+    inStock: true,
+    isNewArrival : true
   },
   {
     _id: uuid(),
-    name: "REGULAR TEE WITH VELVET STRIPES AND TREFOIL RIVET",
+    name: "AEROREADY FULL ZIP HOODIE",
     product:"cloth",
     category:'women',
     originalPrice: 2499,
@@ -82,9 +86,10 @@ export const products = [
     avalabelSize: ['XS', 'S', 'M', 'l', 'XL'],
     isBestseller: false,
     isTrending: true,
-    imageSource: ["assets/Aloe/photo-1.webp", "assets/Aloe/photo-2.webp"],
+    imageSource: ["assets/women/apparels/AEROREADY FULL ZIP HOODIE.jpg"],
     quantity: 12,
-    inStock: true
+    inStock: true,
+    isNewArrival : false
   },
   {
     _id: uuid(),
@@ -98,9 +103,10 @@ export const products = [
     avalabelSize:['4','5','6','7','8','9','10'],
     isBestseller: true,
     isTrending: false,
-    imageSource: ["assets/Aloe/photo-1.webp", "assets/Aloe/photo-2.webp"],
+    imageSource: ["assets/women/shoes/ZX 1K BOOST SHOES.jpg"],
     quantity: 8,
-    inStock: true
+    inStock: true,
+    isNewArrival : false
   },
   {
     _id: uuid(),
@@ -114,13 +120,14 @@ export const products = [
     avalabelSize: ['3','4','5','6'],
     isBestseller: true,
     isTrending: true,
-    imageSource: ["assets/Aloe/photo-1.webp", "assets/Aloe/photo-2.webp"],
+    imageSource: ["assets/kids/shoes/ADIDAS ZX 8000 X LEGO® SHOES.jpg"],
     quantity: 10,
-    inStock: true
+    inStock: true,
+    isNewArrival : false
   },
   {
     _id: uuid(),
-    name: "ADIDAS X MARVEL SPIDER-MAN TEE",
+    name: "ADIDAS X CHELSA TEE",
     product:"cloth",
     category:'kids',
     originalPrice: 1400,
@@ -130,9 +137,10 @@ export const products = [
     avalabelSize: ['XS', 'S', 'M', 'l', 'XL'],
     isBestseller: false,
     isTrending: false,
-    imageSource: ["assets/Aloe/photo-1.webp", "assets/Aloe/photo-2.webp"],
+    imageSource: ["assets/kids/apparels/ADIDAS X CHELSA TEE.jpg"],
     quantity: 12,
-    inStock: true
+    inStock: true,
+    isNewArrival : true
   },
   {
     _id: uuid(),
@@ -141,14 +149,15 @@ export const products = [
     category:'kids',
     originalPrice: 3599,
     discountedPrice: 2999,
-    description: "LOW-PROFILE SHOES INSPIRED BY RETRO SPORT STYLES.",
+    description: "LOW-PROFILE SHOES INSPIRED BY RETRO SPORT STYLES",
     rating: 4.5,
     avalabelSize: ['3','4','5','6'],
     isBestseller: false,
     isTrending: true,
-    imageSource: ["assets/Aloe/photo-1.webp", "assets/Aloe/photo-2.webp"],
+    imageSource: ["assets/kids/shoes/GRAND COURT SHOES.jpg"],
     quantity: 3,
-    inStock: true
+    inStock: true,
+    isNewArrival : false
   },
   
 ];
