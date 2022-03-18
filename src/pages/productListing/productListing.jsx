@@ -13,13 +13,14 @@ function ProductListing() {
 
     return (
         <>
-            <div className='d-flex' >
+            <div className='d-flex filter-productlist-container' >
                 <aside>
                     <div className="filter-container">
                         <div className="filter-head">
-                            <h3>Filter</h3>
-                            <p className="text-underline">Clear</p>
+                            <h3 className="m-0">Filter</h3>
+                            <p className="text-underline m-0">Clear</p>
                         </div>
+                        
                         <div className="filter-content">
                             <h4>Price</h4>
                             <div className="filter-input-group">
@@ -28,6 +29,7 @@ function ProductListing() {
                                     {price}  &amp;above
                                 </span>
                             </div>
+                            <hr  className='customDivider' />
                             <h4>Category</h4>
                             <div className="filter-input-group">
                                 <label htmlFor="category1">
@@ -40,6 +42,7 @@ function ProductListing() {
                                     <input type="radio" name="category" id="category3" /> Kids
                                 </label>
                             </div>
+                            <hr  className='customDivider' />
                             <h4>Ratings</h4>
                             <div className="filter-input-group">
                                 <label htmlFor="rating1">
@@ -52,6 +55,7 @@ function ProductListing() {
                                     <input type="radio" name="rating" id="rating3" /> 2 ★&amp; above
                                 </label>
                             </div>
+                            <hr  className='customDivider' />
                             <h4>Sort By</h4>
                             <div className="filter-input-group">
 

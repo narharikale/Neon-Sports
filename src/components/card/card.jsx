@@ -2,11 +2,11 @@
 
 function Card({ product }) {
 
-    const { imageSource, name, discountedPrice, originalPrice , rating} = product
+    const { imageSource, name, discountedPrice, originalPrice, rating, isBestseller } = product
 
     return (
         <>
-            <div style={{ maxWidth: "300px"}} className="d-flex flex-column card br-top-sm justify-between">
+            <div style={{ maxWidth: "300px" }} className="d-flex flex-column card br-top-sm justify-between">
                 <div>
                     <div className="card-media">
                         <img
@@ -14,6 +14,13 @@ function Card({ product }) {
                             src={imageSource}
                             alt="no img"
                         />
+                        {isBestseller ?
+                            <div className="badge-text bg-green-200 color-green-600 card-badge-topLeft font-size-sm">
+                                <span className="material-icons badge-icon"> trending_up </span>Best Seller
+                            </div>
+                        : false
+                        }
+
                         <button className="btn-icon card-badge-topRight">
                             <span className="material-icons">favorite_border</span>
                         </button>
@@ -30,7 +37,7 @@ function Card({ product }) {
                                 <span class="material-icons font-size-sm">
                                     star_border
                                 </span>
-                            </div>  
+                            </div>
                         </div>
                     </div>
                 </div>
