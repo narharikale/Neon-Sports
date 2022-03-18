@@ -185,7 +185,18 @@
 
 
 /* product listing */
-
+.card{
+  font-size: 13px;
+}
+.star-badge-text {
+  padding: 0px 9px;
+  font-size: 13px;
+  border-radius: 0.938rem;
+  display: flex;
+  border: 2px solid var(--gray-200);
+  min-width: 30px;
+  max-width: fit-content;
+}
 .filter-container{
   background-color: var(--gray-100);
   width: 18rem;
@@ -211,9 +222,7 @@
   padding: 2.5rem;
   justify-content: space-between;
 }
-.productlist-container .card{
- height: fit-content;
-}
+
 
 .mr-btn-10px{
   margin: 10px;
