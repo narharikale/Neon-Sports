@@ -8,16 +8,7 @@ function ProductListing() {
 
     const { data } = useFilter();
     
-    // const sortData =  sortedData(state , products);
-    // const filterPriceData = FilterPriceData(state , sortData);
-    // const filterCategoryData = FilterCategoryData(state , filterPriceData)
-    // const filterRatingData = FilterRatingData(state , filterCategoryData)
-
-
-    
-   
-
-    return (
+     return (
         <>
             <div className='d-flex filter-productlist-container' >
 

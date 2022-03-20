@@ -63,7 +63,7 @@ function Home() {
                                         to='/productlisting'
                                         className="categories-media-overlay"
                                         onClick= { () => dispatch({type:'CATEGORY_FILTER' , payload:categoryName })}
-                                        
+                                            
                                     >
                                         <h2 className="color-white position-center">{categoryName}</h2>
                                     </Link>
