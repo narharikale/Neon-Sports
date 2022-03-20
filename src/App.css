@@ -185,13 +185,25 @@
 
 
 /* product listing */
-
+.card{
+  font-size: 13px;
+}
+.star-badge-text {
+  padding: 0px 9px;
+  font-size: 13px;
+  border-radius: 0.938rem;
+  display: flex;
+  border: 2px solid var(--gray-200);
+  min-width: 1.875rem;
+  max-width: fit-content;
+}
 .filter-container{
   background-color: var(--gray-100);
-  width: 18rem;
+  margin-left: 15px;
   padding: 0.938rem;
+  font-size: 14px;
   position: sticky;
-  top: 0;
+  top:5.938rem;
 }
 
 .filter-head{
@@ -208,15 +220,21 @@
   display: flex;
   gap: 2.188rem;
   flex-wrap: wrap;
-  padding: 2.5rem;
   justify-content: space-between;
 }
-.productlist-container .card{
- height: fit-content;
-}
 
+.filter-productlist-container{
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+.filter-content h4{
+  margin: 10px 0px;
+}
 .mr-btn-10px{
   margin: 10px;
+}
+.customDivider{
+    border: solid 1px var(--gray-200);
 }
 
 /* wishlist */

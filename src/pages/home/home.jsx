@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "../../components/card/card";
+import { useFilter } from "../../context/filter-context";
 import { useProducts } from "../../context/product-context";
 
 
@@ -10,6 +11,7 @@ function Home() {
 
     const [categories, setCategory] = useState([]);
     const { products } = useProducts();
+    const { dispatch } = useFilter() ;
 
     useEffect(() => {
         async function getdata() {
@@ -50,7 +52,6 @@ function Home() {
                     <h2 className="font-size-md mr-top-md">Shop by categories</h2>
                     <div className="categories-container">
                         {categories.map(({ id, categoryName, image }) => {
-
                             return (
                                 <div key={id} className="categories-media">
                                     <img
@@ -61,6 +62,8 @@ function Home() {
                                     <Link
                                         to='/productlisting'
                                         className="categories-media-overlay"
+                                        onClick= { () => dispatch({type:'CATEGORY_FILTER' , payload:categoryName })}
+                                            
                                     >
                                         <h2 className="color-white position-center">{categoryName}</h2>
                                     </Link>
