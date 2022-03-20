@@ -6,7 +6,7 @@ function Card({ product }) {
 
     return (
         <>
-            <div style={{ maxWidth: "300px" }} className="d-flex flex-column card br-top-sm justify-between">
+            <div  className="d-flex flex-column card br-top-sm justify-between">
                 <div>
                     <div className="card-media">
                         <img
@@ -34,7 +34,7 @@ function Card({ product }) {
                             <div className="color-green-600">{(100 * (originalPrice - discountedPrice) / originalPrice).toFixed()}%</div>
                             <div className="star-badge-text bg-warn-200  font-size-sm color-warn-600">
                                 {rating}
-                                <span class="material-icons font-size-sm">
+                                <span className="material-icons font-size-sm">
                                     star_border
                                 </span>
                             </div>
