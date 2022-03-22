@@ -2,7 +2,7 @@ import "./App.css";
 import Mockman from 'mockman-js'
 import Navbar from './components/navbar/navbar.jsx'
 import { Route, Routes } from "react-router-dom";
-import { Home ,ProductListing, Cart, ForgotPassword, Login, SignUp, Wishlist } from "./pages/export";
+import { Home ,ProductListing, Cart, ForgotPassword, Login, SignUp, Wishlist } from "./pages";
 
 function App() {
   return (
