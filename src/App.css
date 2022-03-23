@@ -145,6 +145,7 @@
 }
 .input-container{
   font-size: 14px;
+  position: relative;
 }
 .input-container > input {
   display: flex;
@@ -161,6 +162,14 @@
   padding: 6px;
   font-size: 13px;
 }
+.passwordToggle{
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  color: var(--color-overlay-400);
+  cursor: pointer;
+}
+
 
 /* cart */
 

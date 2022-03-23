@@ -10,6 +10,7 @@ function Login() {
         'password': "",
     });
 
+    const [isPasswordVisible , setisPasswordVisible ] = useState(false);
 
     return (
         <>
@@ -30,10 +31,14 @@ function Login() {
                         <label htmlFor="login-password">Password*</label>
                         <input
                             id="login-password"
-                            type="password"
+                            type={isPasswordVisible ? 'text': 'password'}
                             onChange={(e) => setUser({ ...user, password: e.target.value })}
                             required />
-                        
+                        <span 
+                        className="material-icons passwordToggle" 
+                        onClick={() => setisPasswordVisible(!isPasswordVisible)} >
+                            {isPasswordVisible ? 'visibility' : 'visibility_off'}
+                        </span>
                     </div>
                     { isErr ? <small className="color-red-600 bg-red-200 p-alert w-100-per">&#9888; Some error occurred </small> :<></> }
                   

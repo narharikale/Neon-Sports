@@ -11,6 +11,8 @@ function SignUp() {
         password: "",
         confirmPassword :""
     })
+
+    const [isPasswordVisible , setisPasswordVisible ] = useState(false);
     
     return (
         <>
@@ -52,10 +54,16 @@ function SignUp() {
                         <label htmlFor="signup-password"> Password</label>
                         <input
                             id="signup-password"
-                            type="password"
+                            type={isPasswordVisible ? 'text': 'password'}
                             value={newUser.password}
                             required
-                            onChange={ (e) => setNewUser({...newUser , password:e.target.value}) } />
+                            onChange={ (e) => setNewUser({...newUser , password:e.target.value}) 
+                        } />
+                        <span 
+                        className="material-icons passwordToggle" 
+                        onClick={() => setisPasswordVisible(!isPasswordVisible)} >
+                            {isPasswordVisible ? 'visibility' : 'visibility_off'}
+                        </span>
                     </div>
                     <div className="input-container w-100-per">
                         <label htmlFor="signup-confirm-password">Confirm Password</label>
