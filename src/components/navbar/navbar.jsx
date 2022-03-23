@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom";
+import { useAuth } from "../../context/auth-context";
 
 function Navbar() {
+
+    const { isAuth , setIsAuth} = useAuth()
+    
+    const logOutHandler  = () => {
+        
+        //also remove from db
+        localStorage.removeItem("AuthToken");
+        setIsAuth(false)
+    }
+
     return (
         <>
             <nav className="nav-container nav-container-custom">
@@ -19,9 +30,7 @@ function Navbar() {
                         </form>
                     </div>
                     <div className="nav-right">
-                        <Link to='/login' >
-                            <span className="material-icons">account_circle</span>
-                        </Link>
+                        
                         <Link to='/cart' className="badge-parent">
                             <span className="material-icons"> shopping_cart </span>
                             <div className="badge-with-icon">5</div>
@@ -30,6 +39,7 @@ function Navbar() {
                             <span className="material-icons"> favorite_border </span>
                             <div className="badge-with-icon">3</div>
                         </Link>
+                        { isAuth ?  <button className=" m-0 btn-link color-gray-500" onClick={ () => logOutHandler() } >Logout</button> :<></> }
                     </div>
                 </div>
             </nav>
