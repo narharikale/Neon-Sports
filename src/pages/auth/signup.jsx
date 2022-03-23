@@ -18,7 +18,7 @@ function SignUp() {
                 <form action="submit" method="post" className="auth-form">
                     <h1>Sign Up</h1>
                     <div className="input-container w-100-per">
-                        <label htmlFor="signup-firstName">Full name</label>
+                        <label htmlFor="signup-firstName">First name</label>
                         <input
                             id="signup-firstName"
                             placeholder="john doe"
@@ -28,7 +28,7 @@ function SignUp() {
                             onChange={ (e) => setNewUser({...newUser , firstName:e.target.value}) }/>
                     </div>
                     <div className="input-container w-100-per">
-                        <label htmlFor="signup-lastName">Full name</label>
+                        <label htmlFor="signup-lastName">Last name</label>
                         <input
                             id="signup-lastName"
                             placeholder="john doe"

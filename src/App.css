@@ -123,11 +123,11 @@
   height: 100vh;
 }
 .auth-form-container{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 30px;
 }
 .auth-form{
   display: flex;
@@ -135,22 +135,23 @@
   align-items: center;
   justify-content: center;
   width: 25rem;
-  gap: 20px;
-  padding: 2rem;
+  gap: 14px;
+  padding: 1rem 2rem;
   background-color: var(--gray-100);
 }
 
 .auth-form h1 {
   margin: 7px 0px;
 }
-
+.input-container{
+  font-size: 14px;
+}
 .input-container > input {
   display: flex;
   border: 1px solid gray;
   border-radius: 5px;
   padding: 11px 7px;
   width: -webkit-fill-available;
-
 }
 
 .auth-form input[type="checkbox" i]{
