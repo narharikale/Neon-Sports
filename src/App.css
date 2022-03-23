@@ -156,7 +156,10 @@
 .auth-form input[type="checkbox" i]{
   margin-right: 6px;
 }
-
+.p-alert{
+  padding: 6px;
+  font-size: 13px;
+}
 
 /* cart */
 
