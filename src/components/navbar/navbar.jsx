@@ -3,10 +3,10 @@ import { useAuth } from "../../context/auth-context";
 
 function Navbar() {
 
-    const { isAuth , setIsAuth} = useAuth()
-    
-    const logOutHandler  = () => {
-        
+    const { isAuth, setIsAuth } = useAuth()
+
+    const logOutHandler = () => {
+
         //also remove from db
         localStorage.removeItem("AuthToken");
         setIsAuth(false)
@@ -17,9 +17,9 @@ function Navbar() {
             <nav className="nav-container nav-container-custom">
                 <div className="container d-flex justify-between">
                     <div className="nav-left">
-                            <Link to='/' >
-                                <img className="responsive-img navLogo" src="/assets/neonsportslogo.png" alt="" />
-                            </Link>
+                        <Link to='/' >
+                            <img className="responsive-img navLogo" src="/assets/neonsportslogo.png" alt="" />
+                        </Link>
                         <form className="d-flex p-relative">
                             <input
                                 type="text"
@@ -30,7 +30,7 @@ function Navbar() {
                         </form>
                     </div>
                     <div className="nav-right">
-                        
+
                         <Link to='/cart' className="badge-parent">
                             <span className="material-icons"> shopping_cart </span>
                             <div className="badge-with-icon">5</div>
@@ -39,7 +39,10 @@ function Navbar() {
                             <span className="material-icons"> favorite_border </span>
                             <div className="badge-with-icon">3</div>
                         </Link>
-                        { isAuth ?  <button className=" m-0 btn-link color-gray-500" onClick={ () => logOutHandler() } >Logout</button> :<></> }
+                        {isAuth ? 
+                            <button className="m-0 btn btn-outline font-size-sm " onClick={() => logOutHandler()} >Logout</button> :
+                            <Link to='/login' title="Login" className="m-0 material-icons">login</Link>
+                        }
                     </div>
                 </div>
             </nav>

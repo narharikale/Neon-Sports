@@ -18,7 +18,7 @@ function AuthProvider({ children }) {
     const [isAuth, setIsAuth] = useState(authInitialState);
     const [isErr , setIsErr] = useState(false)
 
-    const loginHandler = async (e, email, password) => {
+    const loginHandler = async (e, email, password ) => {
         e.preventDefault();
         try {
             const response = await axios.post(`/api/auth/login`, {

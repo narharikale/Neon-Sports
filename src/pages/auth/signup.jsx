@@ -17,7 +17,7 @@ function SignUp() {
     return (
         <>
             <div className="auth-form-container">
-                <form action="submit" method="post" className="auth-form">
+                <form onSubmit={ (e) => signupHandler(e , {newUser}) } className="auth-form">
                     <h1>Sign Up</h1>
                     <div className="input-container w-100-per">
                         <label htmlFor="signup-firstName">First name</label>
@@ -82,7 +82,7 @@ function SignUp() {
                             conditions
                         </label>
                     </div>
-                    <button type="submit" onClick={ (e) => signupHandler(e , {newUser}) } className="btn btn-primary font-size-regular w-100-per">
+                    <button type="submit"  className="btn btn-primary font-size-regular w-100-per">
                         Create New Account
                     </button> 
                     <Link to='/login' className="color-gray-500 d-flex gap-sm">
