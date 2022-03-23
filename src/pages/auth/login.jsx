@@ -15,7 +15,10 @@ function Login() {
     return (
         <>
             <div className="auth-form-container">
-                <form className="auth-form" onSubmit={(e) => loginHandler(e, user.email, user.password)}>
+                <form className="auth-form" onSubmit={(e) =>{ 
+                    e.preventDefault() 
+                    loginHandler(user.email, user.password)
+                    }}>
                     <h1>Login</h1>
                     <div className="input-container w-100-per">
                         <label htmlFor="login-email">Email address*</label>
@@ -60,7 +63,7 @@ function Login() {
                         >Login</button>
                     <button
                         className="btn btn-outline font-size-regular w-100-per"
-                        onClick={(e) => loginHandler(e, 'adarshbalika@gmail.com', 'adarshbalika')} >
+                        onClick={(e) => loginHandler('adarshbalika@gmail.com', 'adarshbalika')} >
                         Login as a Guest</button>
                     <Link to='/signup' className="color-gray-500 d-flex gap-sm">
                         Create new account<span className="material-icons">arrow_forward</span>{" "}

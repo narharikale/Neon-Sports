@@ -17,7 +17,11 @@ function SignUp() {
     return (
         <>
             <div className="auth-form-container">
-                <form onSubmit={ (e) => signupHandler(e , {newUser}) } className="auth-form">
+                <form onSubmit={ (e) => {
+                    e.preventDefault()
+                    signupHandler(newUser)
+                }}
+                 className="auth-form">
                     <h1>Sign Up</h1>
                     <div className="input-container w-100-per">
                         <label htmlFor="signup-firstName">First name</label>

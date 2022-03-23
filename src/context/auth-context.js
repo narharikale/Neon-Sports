@@ -18,12 +18,12 @@ function AuthProvider({ children }) {
     const [isAuth, setIsAuth] = useState(authInitialState);
     const [isErr , setIsErr] = useState(false)
 
-    const loginHandler = async (e, email, password ) => {
-        e.preventDefault();
+    const loginHandler = async (email, password ) => {
+
         try {
             const response = await axios.post(`/api/auth/login`, {
-                email: email,
-                password: password
+                email,
+                password
             });
             localStorage.setItem("AuthToken", response.data.encodedToken);
             setIsAuth(true)
@@ -34,8 +34,7 @@ function AuthProvider({ children }) {
         }
     };
 
-    const signupHandler = async (e, {firstName,lastName,email,password}) => {
-        e.preventDefault()
+    const signupHandler = async ({firstName,lastName,email,password}) => {
         try {
             const response = await axios.post(`/api/auth/signup`, {
                 'firstName': firstName,
