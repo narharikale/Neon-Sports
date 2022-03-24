@@ -25,13 +25,13 @@ function Home() {
     return (
         <>
             <main>
-                <section className="hero-img">
+                <section className="hero-img d-flex justify-center">
                     <img
                         className="responsive-img obj-fit-cover"
                         src="/assets/homepageBanner1.jpg"
                         alt=""
                     />
-                    <div className="hero-overlay d-flex align-center">
+                    <div className="hero-overlay d-flex align-center container">
                         <div className="hero-overlay-heading font-size-lg">
                             <h4>Upto 25% off</h4>
                             <h1 className="font-size-xlg">
@@ -49,7 +49,7 @@ function Home() {
                     </div>
                 </section>
                 <section className="container">
-                    <h2 className="font-size-md mr-top-md">Shop by categories</h2>
+                    <h2 className="font-size-md mr-top-md  categories-heading">Shop by categories</h2>
                     <div className="categories-container">
                         {categories.map(({ id, categoryName, image }) => {
                             return (
@@ -75,7 +75,7 @@ function Home() {
                     </div>
                 </section>
                 <section className="container">
-                    <h2 className="font-size-md mr-top-md">New arrivals</h2>
+                    <h2 className="font-size-md mr-top-md categories-heading">New arrivals</h2>
                     <div className="categories-container">
                         {products ? products.map((product) => {
                             return (product.isNewArrival ? <Card key={product._id} product={product} /> : false)

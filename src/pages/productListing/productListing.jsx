@@ -10,10 +10,10 @@ function ProductListing() {
     
      return (
         <>
-            <div className='d-flex filter-productlist-container' >
+            <div className='filter-productlist-container p-2' >
 
                 <Filter />
-                <main className='p-2'>
+                <main >
                 <div>Showing {data.length} Products</div>
                     <div className="productlist-container">
                     
