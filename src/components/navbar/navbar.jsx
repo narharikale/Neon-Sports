@@ -20,17 +20,17 @@ function Navbar() {
                         <Link to='/' >
                             <img className="responsive-img navLogo" src="/assets/neonsportslogo.png" alt="" />
                         </Link>
-                        <form className="d-flex p-relative">
+                        <div className="d-flex p-relative searchbar-container">
                             <input
                                 type="text"
                                 className="searchbar-input"
                                 placeholder="Search for products"
                             />
                             <span className="material-icons searchbar-icon">search</span>
-                        </form>
+                        </div>
                     </div>
                     <div className="nav-right">
-
+                        <span className="material-icons search-icon">search</span>
                         <Link to='/cart' className="badge-parent">
                             <span className="material-icons"> shopping_cart </span>
                             <div className="badge-with-icon">5</div>

@@ -10,7 +10,7 @@ function Filter() {
 
     return (
         <>
-            <aside>
+            <aside className="filter-sidebar" >
                 <div className="filter-container">
                     <div className="filter-head">
                         <h3 className="m-0">Filter</h3>
