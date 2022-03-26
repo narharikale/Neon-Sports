@@ -16,7 +16,7 @@ ReactDOM.render(
         <PrductProvider>
           <FilterProvider>
             <WishlistProvider>
-              <App />
+                <App />
             </WishlistProvider>
           </FilterProvider>
         </PrductProvider>

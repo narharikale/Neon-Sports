@@ -1,6 +1,7 @@
 import "./App.css";
+import { Navbar } from "./components";
 
-import Navbar from './components/navbar/navbar.jsx'
+
 import { Routers } from "./router/router";
 
 function App() {

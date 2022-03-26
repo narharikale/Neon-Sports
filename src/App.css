@@ -178,7 +178,7 @@
   display: grid;
   grid-template-columns: minmax(0,60%) 40%;
   gap: 4rem;
-  margin: auto;
+  margin: 57px auto;
 }
 .p-sticky-top{
   position:sticky;

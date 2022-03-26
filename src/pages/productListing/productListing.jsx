@@ -1,4 +1,5 @@
-import { Card }from '../../components/card/card';
+
+import { Card } from '../../components';
 import { useFilter } from '../../context/filter-context';
 import Filter from './filter';
 
