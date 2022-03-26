@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/auth-context";
+import { useWishlist } from "../../context/wishlist-context";
 
 function Navbar() {
 
-    const { isAuth, setIsAuth } = useAuth()
-
+    const { isAuth, setIsAuth } = useAuth(); 
+    const { wishlistData } = useWishlist();
     const logOutHandler = () => {
 
         //also remove from db
@@ -37,7 +38,7 @@ function Navbar() {
                         </Link>
                         <Link to="/wishlist" className="badge-parent">
                             <span className="material-icons"> favorite_border </span>
-                            <div className="badge-with-icon">3</div>
+                            { wishlistData.length > 0 ? <div className="badge-with-icon">{wishlistData.length}</div> : null }
                         </Link>
                         {isAuth ? 
                             <button className="m-0 btn btn-outline font-size-sm " onClick={() => logOutHandler()} >Logout</button> :

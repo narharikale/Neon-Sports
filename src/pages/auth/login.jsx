@@ -43,7 +43,7 @@ function Login() {
                             {isPasswordVisible ? 'visibility' : 'visibility_off'}
                         </span>
                     </div>
-                    { isErr ? <small className="color-red-600 bg-red-200 p-alert w-100-per">&#9888; Some error occurred </small> :<></> }
+                    { isErr ? <small className="color-red-600 bg-red-200 p-alert w-100-per">&#9888; Some error occurred </small> :null }
                   
                     <div className="d-flex w-100-per justify-between">
                         <label htmlFor="rememberMe">
