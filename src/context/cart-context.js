@@ -7,10 +7,10 @@ import { useAuth } from "./auth-context";
 const cartContext = createContext(null);
 const useCart = () => useContext(cartContext);
 
-const authtoken = localStorage.getItem("AuthToken")  
+
 
 function CartProvider({ children }) {
-
+    const authtoken = localStorage.getItem("AuthToken")  
     const [cartData , setcartData ] =  useState([]);
     const { isAuth}  = useAuth();
 

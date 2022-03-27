@@ -13,7 +13,6 @@ const authInitialState = localStorage.getItem("AuthToken") ? true : false ;
 
 function AuthProvider({ children }) {
 
-    const navigate = useNavigate();
     const [isAuth, setIsAuth] = useState(authInitialState);
     const [isErr , setIsErr] = useState(false)
 
@@ -27,7 +26,7 @@ function AuthProvider({ children }) {
             
             localStorage.setItem("AuthToken", response.data.encodedToken);
             setIsAuth(true)
-            navigate('/')
+           
         } catch (error) {
              console.error(error);
              setIsErr(true);
@@ -44,7 +43,7 @@ function AuthProvider({ children }) {
             });
             localStorage.setItem("AuthToken", response.data.encodedToken);
             setIsAuth(true)
-            navigate('/')
+           
         } catch (error) {
             console.error(error);
         }
@@ -54,7 +53,7 @@ function AuthProvider({ children }) {
 
     return (
 
-        <AuthContext.Provider value={{ isAuth, setIsAuth, loginHandler , signupHandler , navigate, isErr}} >
+        <AuthContext.Provider value={{ isAuth, setIsAuth, loginHandler , signupHandler , isErr}} >
             {children}
         </AuthContext.Provider>
 

@@ -36,7 +36,7 @@ function WishlistProvider({ children }) {
                     authorization: authtoken,
                 },
             });
-            console.log(res.data ,"delete")
+           
             setWishlistData(res.data.wishlist)
         } catch (error) {
             console.error(error)
