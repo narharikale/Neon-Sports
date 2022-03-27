@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const AuthContext = createContext(null);
 const useAuth = () => useContext(AuthContext);
 
-const authInitialState = localStorage.getItem("AuthToken") ? true : false
+const authInitialState = localStorage.getItem("AuthToken") ? true : false ; 
 
 
 
@@ -24,6 +24,7 @@ function AuthProvider({ children }) {
                 email,
                 password
             });
+            
             localStorage.setItem("AuthToken", response.data.encodedToken);
             setIsAuth(true)
             navigate('/')

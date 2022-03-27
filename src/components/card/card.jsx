@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
+import { useAuth } from "../../context/auth-context";
+import { useCart } from "../../context/cart-context";
 import { useWishlist } from "../../context/wishlist-context";
 
 function Card({ product }) {
   const { wishlistData, addToWishlist , removeFromWishlist } = useWishlist();
-
-
+  const { cartData ,addToCart } = useCart();
+  const { isAuth } = useAuth();
 
 
   const {
@@ -68,9 +71,18 @@ function Card({ product }) {
             </div>
           </div>
         </div>
-        <button className="btn btn-add-cart btn-primary mr-btn-10px font-size-regular">
+        { cartData.find( (cartItem) => cartItem._id === _id) ? 
+        <Link className="btn btn-add-cart btn-outline mr-btn-10px font-size-regular" to='/cart' >
+          Go to Cart
+        </Link>  
+        : isAuth ?  <button className="btn btn-add-cart btn-primary mr-btn-10px font-size-regular" onClick={ () => addToCart(product) } >
           Add to Cart
-        </button>
+          </button> : <Link className="btn btn-add-cart btn-primary mr-btn-10px font-size-regular" to='/login' >
+          Add to Cart
+          </Link>
+
+        }
+        
       </div>
     </>
   );

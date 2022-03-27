@@ -1,4 +1,13 @@
+import { useCart } from "../../context/cart-context";
+
+
+
 function PriceDetailsCard() {
+
+    const { cartData , reducedData } = useCart();
+    
+  
+   const {totalDiscoutPrice , totalOriginalPrice}= reducedData
   return (
     <>
       <div>
@@ -17,10 +26,10 @@ function PriceDetailsCard() {
           <hr />
           <ul className="d-flex gap-1 flex-column justify-between list-style-none">
             <li className="d-flex justify-between">
-              <span>Price</span> <span>₹1398</span>
+              <span>Price</span> <span> ₹{ totalOriginalPrice }</span>
             </li>
             <li className="d-flex justify-between">
-              <span>Discount</span> <span>-₹699</span>
+              <span>Discount</span> <span className="color-green-600" >-₹ { totalOriginalPrice - totalDiscoutPrice } </span>
             </li>
             <li className="d-flex justify-between">
               <span>Delivery Charges</span> <span>Free</span>
@@ -28,12 +37,12 @@ function PriceDetailsCard() {
           </ul>
           <hr />
           <h4>
-            <p className="d-flex justify-between">
-              <span>Total</span> <span>₹699</span>
+            <p className="d-flex justify-between font-size-regular">
+              <span>Total</span> <span>₹ { totalDiscoutPrice }</span>
             </p>
           </h4>
           <hr />
-          <p>you will save ₹699 on this order </p>
+          <p>you will save ₹{ totalOriginalPrice - totalDiscoutPrice } on this order </p>
           <button className="btn btn-primary font-size-regular w-100-per">
             Continue
           </button>
