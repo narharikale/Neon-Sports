@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Card } from "../../components/card/card";
+import { Card } from "../../components";
+
 import { useWishlist } from "../../context/wishlist-context";
 
 function Wishlist() {
@@ -15,7 +16,7 @@ function Wishlist() {
           })
         ) : (
           <div className=" d-flex align-center flex-column mr-auto-center">
-            <h2>Your Cart is empty !</h2>
+            <h2>Your Wishlist is empty !</h2>
             <Link to="/productlisting" className="btn btn-primary">
               Add Products
             </Link>

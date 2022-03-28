@@ -178,15 +178,24 @@
   display: grid;
   grid-template-columns: minmax(0,60%) 40%;
   gap: 4rem;
-  margin: auto;
+  margin: 57px auto;
 }
 .p-sticky-top{
   position:sticky;
   top: 4rem;
 }
-
-
-
+.card-body-header{
+  font-size: 13px;
+  gap: .5rem;
+}
+.cart-btns{
+  display: flex;
+  flex-direction: column;
+  gap: 7px ;
+}
+.cart-btns .btn {
+  padding: 2px;
+}
 
 /* product listing */
 .card{

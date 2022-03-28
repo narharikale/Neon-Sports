@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes , } from "react-router-dom";
 import { Home ,ProductListing, Cart, ForgotPassword, Login, SignUp, Wishlist } from '../pages/index'
-import { PrivateRoute } from  '../components/private-route/private-route'
+import { PrivateRoute } from "../components";
 import Mockman from 'mockman-js';
 import { useAuth } from "../context/auth-context";
 

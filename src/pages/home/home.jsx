@@ -1,14 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Card } from "../../components/card/card";
+import { Card } from "../../components";
+
 import { useFilter } from "../../context/filter-context";
 import { useProducts } from "../../context/product-context";
 
 
 
 function Home() {
-
+    
     const [categories, setCategory] = useState([]);
     const { products } = useProducts();
     const { dispatch } = useFilter() ;
