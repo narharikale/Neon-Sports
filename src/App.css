@@ -282,7 +282,11 @@
   margin-left: auto;
   margin-right: auto;
 }
-
+.productCount{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+}
 
 
 /* media-queries */
@@ -347,7 +351,6 @@
   }
   
   .container{
-    width: 400px;
     margin: auto;
   }
   .filter-sidebar{
@@ -374,5 +377,8 @@
   }
   .card-horizontal{
    flex-direction: column;
+  }
+  .productCount{
+    justify-content:center;
   }
 }
