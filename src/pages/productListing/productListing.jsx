@@ -15,7 +15,7 @@ function ProductListing() {
 
                 <Filter />
                 <main >
-                <div>Showing {data.length} Products</div>
+                <div className='productCount' >Showing {data.length} Products</div>
                     <div className="productlist-container">
                     
                         {data && data.map((product) => {
