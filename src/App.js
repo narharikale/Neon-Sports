@@ -1,13 +1,12 @@
 import "./App.css";
-import { Navbar } from "./components";
-
-
+import { Navbar, Toast } from "./components";
 import { Routers } from "./router/router";
 
 function App() {
 
   return (
     <div className="App">
+      <Toast/>
       <Navbar/>
       <Routers/>
     </div>

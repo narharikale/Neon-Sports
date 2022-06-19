@@ -52,9 +52,7 @@ function Login() {
                                 type="checkbox" />
                             Remember me
                         </label>
-                        <Link to='/forgotpassword' className="color-gray-500 text-underline">
-                            Forgot Password
-                        </Link>
+                        
                     </div>
 
                     <button
@@ -63,7 +61,7 @@ function Login() {
                         >Login</button>
                     <button
                         className="btn btn-outline font-size-regular w-100-per"
-                        onClick={(e) => loginHandler('adarshbalika@gmail.com', 'adarshbalika')} >
+                        onClick={(e) => loginHandler('narhari12@gmail.com', 'narharikale')} >
                         Login as a Guest</button>
                     <Link to='/signup' className="color-gray-500 d-flex gap-sm">
                         Create new account<span className="material-icons">arrow_forward</span>{" "}

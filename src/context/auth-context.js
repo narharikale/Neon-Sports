@@ -49,8 +49,6 @@ function AuthProvider({ children }) {
         }
     };
 
-    
-
     return (
 
         <AuthContext.Provider value={{ isAuth, setIsAuth, loginHandler , signupHandler , isErr}} >

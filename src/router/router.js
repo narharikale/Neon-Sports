@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes , } from "react-router-dom";
-import { Home ,ProductListing, Cart, ForgotPassword, Login, SignUp, Wishlist } from '../pages/index'
+import { Home ,ProductListing, Cart,Login, SignUp, Wishlist, Checkout, Profile, Orders, Address } from '../pages/index'
 import { PrivateRoute } from "../components";
 import Mockman from 'mockman-js';
 import { useAuth } from "../context/auth-context";
@@ -22,11 +22,43 @@ function Routers() {
             </PrivateRoute>
           }
         />
+          <Route
+          path="/checkout"
+          element={
+            <PrivateRoute>
+              <Checkout />
+            </PrivateRoute>
+          }
+        />
          <Route
           path="/wishlist"
           element={
             <PrivateRoute>
               <Wishlist />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <PrivateRoute>
+              <Profile />
+            </PrivateRoute>
+          }
+        />
+         <Route
+          path="/profile/address"
+          element={
+            <PrivateRoute>
+              <Address />
+            </PrivateRoute>
+          }
+        />
+         <Route
+          path="/profile/orders"
+          element={
+            <PrivateRoute>
+              <Orders />
             </PrivateRoute>
           }
         />
@@ -37,7 +69,6 @@ function Routers() {
           </>
         )}
         
-        <Route path="/forgotpassword" element={<ForgotPassword/>} />
         <Route path="*" element={<Navigate to='/' replace/> } />
         <Route path="/mock" element={<Mockman/>} />
       </Routes>

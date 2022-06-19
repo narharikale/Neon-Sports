@@ -83,7 +83,7 @@ function CartProvider({ children }) {
     const reducedData = cartData.reduce(priceDetailsCalc , { totalOriginalPrice : 0 , totalDiscoutPrice : 0 })
     
     return ( 
-        <cartContext.Provider value ={{ cartData , addToCart ,getQuantity ,removeFromCart , reducedData }}>
+        <cartContext.Provider value ={{ cartData , addToCart ,getQuantity ,removeFromCart , reducedData , setcartData }}>
             { children }
         </cartContext.Provider>
 
