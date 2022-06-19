@@ -8,12 +8,7 @@ function Navbar() {
     const { isAuth, setIsAuth } = useAuth(); 
     const { wishlistData } = useWishlist();
     const { cartData } = useCart();
-    const logOutHandler = () => {
-
-        //also remove from db
-        localStorage.removeItem("AuthToken");
-        setIsAuth(false)
-    }
+    
 
     return (
         <>
@@ -42,8 +37,8 @@ function Navbar() {
                             <span className="material-icons"> favorite_border </span>
                             { wishlistData.length > 0 ? <div className="badge-with-icon">{wishlistData.length}</div> : null }
                         </Link>
-                        { isAuth ? 
-                            <button className="m-0 btn btn-outline font-size-sm " onClick={() => logOutHandler()} >Logout</button> :
+                        { isAuth ? <Link to='/profile' title="Profile" className="m-0 btn btn-outline font-size-sm">Profile</Link> :
+                            // <button className="m-0 btn btn-outline font-size-sm " onClick={() => logOutHandler()} >Logout</button> 
                             <Link to='/login' title="Login" className="m-0 material-icons">login</Link>
                         }
                     </div>

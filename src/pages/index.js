@@ -4,4 +4,7 @@ export { ProductListing } from './productListing/productListing';
 export { Wishlist } from './wishlist/wishlist';
 export { Login } from './auth/login';
 export { SignUp } from './auth/signup';
-export { ForgotPassword } from './auth/forgot-password';
+export { Checkout } from './checkout/Checkout';
+export { Profile } from './profile/profile'
+export { Address } from './profile/address'
+export { Orders } from './profile/orders'

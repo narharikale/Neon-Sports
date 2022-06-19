@@ -16,7 +16,7 @@ function PrductProvider({ children }) {
                 setProducts(res.data.products)
             }
             catch (err) {
-                console.log(err)
+                console.error(err)
             }
         })()
 
