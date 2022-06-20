@@ -1,17 +1,13 @@
 import { createContext, useContext, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 
 const AuthContext = createContext(null);
 const useAuth = () => useContext(AuthContext);
 
-const authInitialState = localStorage.getItem("AuthToken") ? true : false ; 
-
-
-
 
 function AuthProvider({ children }) {
+    const authInitialState = localStorage.getItem("AuthToken") ? true : false ; 
 
     const [isAuth, setIsAuth] = useState(authInitialState);
     const [isErr , setIsErr] = useState(false)
