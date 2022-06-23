@@ -7,7 +7,7 @@ function Orders() {
       <ProfileSidebar />
       <main>
         <div className="productlist-container profile-page-main">
-            placed orders will update here
+            Placed orders will update here
         </div>
       </main>
     </div>

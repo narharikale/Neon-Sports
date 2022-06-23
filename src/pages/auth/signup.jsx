@@ -78,14 +78,7 @@ function SignUp() {
                             required
                             onChange={ (e) => setNewUser({...newUser , confirmPassword:e.target.value}) } />
                     </div>
-                    <div className="d-flex w-100-per justify-between">
-                        <label htmlFor="rememberMe">
-                            <input
-                                id="rememberMe"
-                                type="checkbox" /> I Accept all terms and
-                            conditions
-                        </label>
-                    </div>
+                  
                     <button type="submit"  className="btn btn-primary font-size-regular w-100-per">
                         Create New Account
                     </button> 

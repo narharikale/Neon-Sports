@@ -67,6 +67,7 @@ function Address() {
                       className="addressBtn"
                       onClick={() => {
                         removeAddress(address._id);
+                        setisAddresSelected({status:false , id:''})
                       }}
                     >
                       Delete

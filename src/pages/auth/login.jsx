@@ -45,15 +45,6 @@ function Login() {
                     </div>
                     { isErr ? <small className="color-red-600 bg-red-200 p-alert w-100-per">&#9888; Some error occurred </small> :null }
                   
-                    <div className="d-flex w-100-per justify-between">
-                        <label htmlFor="rememberMe">
-                            <input
-                                id="rememberMe"
-                                type="checkbox" />
-                            Remember me
-                        </label>
-                        
-                    </div>
 
                     <button
                         type="submit"
