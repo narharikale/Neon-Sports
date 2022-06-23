@@ -14,7 +14,7 @@ function ProfileSidebar() {
         <ul className="profile-menu">
             <Link className='profile-menu-li' to='/profile'>Profile</Link>
             <Link className='profile-menu-li' to='/profile/address'> Address </Link>
-            <Link className='profile-menu-li' to='/profile/orders'> Orders </Link>
+            {/* <Link className='profile-menu-li' to='/profile/orders'> Orders </Link> */}
             <div className='profile-menu-li' onClick={ logOutHandler } > Logout </div>
         </ul>
     )

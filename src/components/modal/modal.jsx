@@ -22,7 +22,7 @@ function Modal({ isEdit, editAddress, setAddressModal }) {
           <button
             className="btn modal-close-btn"
             onClick={() => setAddressModal(false)}
-          >
+           >
             {" "}
             <span className="material-icons">clear</span>
           </button>
@@ -30,7 +30,7 @@ function Modal({ isEdit, editAddress, setAddressModal }) {
             onSubmit={(e) => {
               e.preventDefault();
               isEdit ? updateAddress(address) :  addAddress(address);
-             
+              setAddressModal(false)
             }}
             className="modal-content p-relative"
           >
@@ -76,7 +76,7 @@ function Modal({ isEdit, editAddress, setAddressModal }) {
               <input
                 id="address-state"
                 type="text"
-                value={address.state}
+                value={ address.state }
                 required
                 onChange={(e) =>
                   setAddress({ ...address, state: e.target.value })
@@ -88,7 +88,7 @@ function Modal({ isEdit, editAddress, setAddressModal }) {
               <input
                 id="address-zipcode"
                 type="number"
-                value={address.zipcode}
+                value={ address.zipcode }
                 required
                 onChange={(e) =>
                   setAddress({ ...address, zipcode: e.target.value })

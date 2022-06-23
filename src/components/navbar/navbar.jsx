@@ -18,14 +18,14 @@ function Navbar() {
                         <Link to='/' >
                             <img className="responsive-img navLogo" src="/assets/neonsportslogo.png" alt="" />
                         </Link>
-                        <div className="d-flex p-relative searchbar-container">
+                        {/* <div className="d-flex p-relative searchbar-container">
                             <input
                                 type="text"
                                 className="searchbar-input"
                                 placeholder="Search for products"
                             />
                             <span className="material-icons searchbar-icon">search</span>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="nav-right">
                         <span className="material-icons search-icon">search</span>
