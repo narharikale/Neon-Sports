@@ -275,9 +275,7 @@
 .justify-center {
   justify-content: center;
 }
-.search-icon {
-  display: none;
-}
+
 .mr-auto-center {
   margin-left: auto;
   margin-right: auto;
@@ -425,9 +423,7 @@
     width: 800px;
     margin: auto;
   }
-  .search-icon {
-    display: none;
-  }
+  
   .searchbar-container {
     display: block;
     align-self: center;
@@ -470,7 +466,7 @@
   }
 
   .container {
-    margin: auto;
+    width: 100%;
   }
   .filter-sidebar {
     display: flex;
@@ -488,9 +484,7 @@
   .searchbar-container {
     display: none;
   }
-  .search-icon {
-    display: block;
-  }
+ 
   .cart-container {
     grid-template-columns: 1fr;
   }

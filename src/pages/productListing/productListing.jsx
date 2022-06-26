@@ -7,18 +7,23 @@ import Filter from './filter';
 
 function ProductListing() {
 
-    const { data } = useFilter();
-    
+    const { data , searchQuery } = useFilter();
+    let finalData = data ;
+
+    finalData = finalData.filter((product) => {
+        return product.name.includes(searchQuery?.toUpperCase())
+    })
+
      return (
         <>
             <div className='filter-productlist-container p-2' >
 
                 <Filter />
                 <main >
-                <div className='productCount' >Showing {data.length} Products</div>
+                <div className='productCount' >Showing {finalData.length} Products</div>
                     <div className="productlist-container">
                     
-                        {data && data.map((product) => {
+                        {finalData && finalData.map((product) => {
 
                             return (
                                 <Card key={product._id} product={product} />

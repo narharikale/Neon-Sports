@@ -19,8 +19,8 @@ function AuthProvider({ children }) {
                 email,
                 password
             });
-            
             localStorage.setItem("AuthToken", response.data.encodedToken);
+            localStorage.setItem("AuthUser", JSON.stringify(response.data.foundUser));
             setIsAuth(true)
            
         } catch (error) {
@@ -47,7 +47,7 @@ function AuthProvider({ children }) {
 
     return (
 
-        <AuthContext.Provider value={{ isAuth, setIsAuth, loginHandler , signupHandler , isErr}} >
+        <AuthContext.Provider value={{ isAuth, setIsAuth, loginHandler , signupHandler , isErr }} >
             {children}
         </AuthContext.Provider>
 

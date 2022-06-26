@@ -1,15 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/auth-context";
 import { useCart } from "../../context/cart-context";
+import { useFilter } from "../../context/filter-context";
 import { useWishlist } from "../../context/wishlist-context";
 
 function Navbar() {
 
-    const { isAuth, setIsAuth } = useAuth(); 
+    const { isAuth } = useAuth(); 
     const { wishlistData } = useWishlist();
     const { cartData } = useCart();
-    
+    const { setSearchQuery } = useFilter()
+    const navigate = useNavigate()
 
+    
     return (
         <>
             <nav className="nav-container nav-container-custom">
@@ -18,17 +21,20 @@ function Navbar() {
                         <Link to='/' >
                             <img className="responsive-img navLogo" src="/assets/neonsportslogo.png" alt="" />
                         </Link>
-                        {/* <div className="d-flex p-relative searchbar-container">
+                    </div>
+                    <div className="d-flex p-relative searchbar-container">
                             <input
                                 type="text"
                                 className="searchbar-input"
                                 placeholder="Search for products"
+                                onChange={(e)=> {
+                                navigate('/productlisting')
+                                setSearchQuery(e.target.value)}}
                             />
                             <span className="material-icons searchbar-icon">search</span>
-                        </div> */}
                     </div>
+
                     <div className="nav-right">
-                        <span className="material-icons search-icon">search</span>
                         <Link to='/cart' className="badge-parent">
                             <span className="material-icons"> shopping_cart </span>
                            { cartData.length > 0 ? <div className="badge-with-icon">{cartData.length}</div> : null}

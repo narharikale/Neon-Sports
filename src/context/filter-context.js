@@ -1,4 +1,4 @@
-import { createContext , useReducer , useContext} from "react";
+import { createContext , useReducer , useContext ,useState } from "react";
 import { useProducts } from "./product-context";
 import { sortedData, FilterPriceData ,FilterCategoryData , FilterRatingData , ComposeAll} from '../utils/filterutils';
 import { filterReducer } from '../reducers/filter-reducer'
@@ -17,13 +17,14 @@ function FilterProvider({children}) {
 
    
     const [state , dispatch] = useReducer(filterReducer , initialState);
-    
+    const [ searchQuery , setSearchQuery ] = useState('')
+
     const { products } = useProducts();
     const data = ComposeAll(state , products , sortedData, FilterPriceData ,FilterCategoryData , FilterRatingData)
 
 
     return ( 
-        <filterContext.Provider value={{state ,dispatch, data }} >
+        <filterContext.Provider value={{state ,dispatch, data , searchQuery , setSearchQuery}} >
             {children}
         </filterContext.Provider>
     );
