@@ -44,6 +44,11 @@
   max-inline-size: none;
 }
 
+.searchbar-input{
+  align-self: end;
+}
+
+
 /* homepage */
 
 .hero-img {
@@ -190,6 +195,8 @@
   background-color: var(--color-overlay-400);
   cursor:not-allowed;
 }
+
+
 /* product listing */
 .card {
   font-size: 13px;
@@ -397,6 +404,10 @@
   background-color: var(--gray-100);
 }
 
+.mb-1{
+  margin-bottom: 1rem;
+}
+
 /* media-queries */
 
 @media screen and (max-width: 500px) {
@@ -419,6 +430,16 @@
   }
   .searchbar-container {
     display: block;
+    align-self: center;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: 1px solid var(--color-overlay-100);
+  }
+  .searchbar-container:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px, rgba(0, 0, 0, 0.23) 0px 2px 4px;
+  }
+  .searchbar-container input:focus{
+    outline:1px solid var(--gray-500);
   }
 }
 
