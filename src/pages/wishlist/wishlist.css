@@ -1,0 +1,22 @@
+/* wishlist */
+
+.wishlist-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 6rem 2rem;
+    gap: 2.5rem;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .mr-auto-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .productCount {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+  }
+  

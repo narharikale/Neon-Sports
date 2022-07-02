@@ -1,3 +1,4 @@
+import './productlisting.css'
 import { useState } from "react";
 import { useFilter } from "../../context/filter-context";
 

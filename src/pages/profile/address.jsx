@@ -1,11 +1,9 @@
 import { ProfileSidebar } from "./profile";
-import "./profile.css";
 import { useAddress } from "../../context/address-context";
 import { useState } from "react";
-import { Modal, PriceDetailsCard } from "../../components";
+import { Modal } from "../../components";
 import "../../App.css";
 import { useCart } from "../../context/cart-context";
-import { Link } from "react-router-dom";
 
 function Address() {
   const [addressModal, setAddressModal] = useState(false);

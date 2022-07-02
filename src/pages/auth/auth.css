@@ -1,0 +1,65 @@
+/* auth page */
+
+.h-100-vh {
+  height: 100vh;
+}
+.auth-form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 30px;
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25rem;
+  gap: 14px;
+  padding: 1rem 2rem;
+  background-color: var(--gray-100);
+}
+
+.auth-form h1 {
+  margin: 7px 0px;
+}
+.input-container {
+  font-size: 14px;
+  position: relative;
+}
+.input-container > input {
+  display: flex;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 11px 7px;
+  width: -webkit-fill-available;
+}
+
+.auth-form input[type="checkbox" i] {
+  margin-right: 6px;
+}
+.p-alert {
+  padding: 6px;
+  font-size: 13px;
+}
+.passwordToggle {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  color: var(--color-overlay-400);
+  cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width: 520px) {
+
+  .auth-form-container {
+    margin: 0;
+  }
+  .auth-form {
+    width: 22rem;
+  }
+}
