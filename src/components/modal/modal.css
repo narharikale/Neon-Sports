@@ -1,0 +1,41 @@
+/* Modal */
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.margin-right-10 {
+  margin-right: 10px;
+}
+
+.modal-close-btn {
+  align-self: flex-end;
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25rem;
+  gap: 14px;
+  padding: 1rem 2rem;
+  background-color: var(--gray-100);
+}
+
+
+
+
+
+@media screen and (max-width: 520px) {
+    .modal-content {
+        width: 20rem;
+    }
+}

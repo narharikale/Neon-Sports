@@ -1,3 +1,4 @@
+import './modal.css'
 import { useState } from "react";
 import { useAddress } from "../../context/address-context";
 

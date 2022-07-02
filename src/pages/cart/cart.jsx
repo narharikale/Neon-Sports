@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { CartProductCard, PriceDetailsCard } from "../../components";
 import { useCart } from "../../context/cart-context";
-
-
+import './cart.css';
 
 
 
@@ -10,7 +9,8 @@ import { useCart } from "../../context/cart-context";
 
 function Cart() {
  
-    const { cartData } = useCart()
+    const { cartData } = useCart();
+    console.log(cartData , "cartData");
 
     return (  
             

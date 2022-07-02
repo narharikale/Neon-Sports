@@ -1,22 +1,102 @@
-
-.profile-menu{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    font-size: 1.1rem;
-    width: 100%;
-    border: 1px solid var(--color-overlay-100);
+.profile-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  width: 100%;
+  border: 1px solid var(--color-overlay-100);
 }
 
 .profile-menu-li {
-    padding: 1rem;
+  padding: 1rem;
 }
-.profile-page-main{
-    width: 80%;
+.profile-page-main {
+  width: 80%;
 }
 .profile-menu-li:hover {
-    background-color: var(--gray-200);
+  background-color: var(--gray-200);
 }
 
+.address-img-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-overlay-100);
+  border-radius: 4px;
+}
+.address-img-card-body {
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+.address-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-overlay-100);
+  border-radius: 4px;
+}
+.address-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+  padding: 0.5rem 0.5rem;
+  background-color: var(--gray-100);
+  width: 100%;
+}
 
+.address-label {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.address-label:hover {
+  background-color: var(--gray-100);
+}
+.address-label .menu {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.address-card-body p {
+  margin: 0;
+  font-size: 12px;
+  flex-basis: 70%;
+}
+
+.address-card-body h4 {
+  margin: 0;
+  font-size: 13px;
+  flex-basis: 70%;
+}
+.address-card-body .menu {
+  flex-basis: 30%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.address-card-header .addressBtn {
+  color: white;
+  background-color: var(--gray-500);
+}
+
+.addressBtn {
+  border: 1.5px solid var(--color-overlay-100);
+  background-color: var(--white);
+  border-radius: 3px;
+  margin: 4px;
+  padding: 2px 0.5rem;
+}
+
+.address-card-body .addressBtn:hover {
+  background-color: var(--gray-500);
+  color: white;
+}
+
+.address-img {
+  aspect-ratio: 1/1;
+  height: 6rem;
+}

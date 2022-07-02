@@ -1,0 +1,28 @@
+.navlogo {
+  max-height: 50px;
+  max-inline-size: none;
+}
+
+.searchbar-input {
+  align-self: end;
+}
+
+.searchbar-container {
+  display: none;
+}
+
+@media screen and (min-width: 820px) {
+  .searchbar-container {
+    display: block;
+    align-self: center;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: 1px solid var(--color-overlay-100);
+  }
+  .searchbar-container:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px, rgba(0, 0, 0, 0.23) 0px 2px 4px;
+  }
+  .searchbar-container input:focus {
+    outline: 1px solid var(--gray-500);
+  }
+}

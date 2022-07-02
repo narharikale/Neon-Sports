@@ -1,4 +1,4 @@
-
+import './productlisting.css'
 import { Card } from '../../components';
 import { useFilter } from '../../context/filter-context';
 import Filter from './filter';
